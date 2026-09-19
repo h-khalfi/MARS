@@ -1,9 +1,0 @@
-# MARS brick configuration
-
-brick.title: Cours
-brick.slug: lectures
-brick.short_title: ""
-brick.kind: lectures
-brick.order: 1
-deck.label: Chapitre
-output.pattern: "{stack.short}_{deck.number}.pdf"

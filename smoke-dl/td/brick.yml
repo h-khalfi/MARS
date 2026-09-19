@@ -1,9 +1,0 @@
-# MARS brick configuration
-
-brick.title: "Travaux dirigés"
-brick.slug: td
-brick.short_title: TD
-brick.kind: tutorials
-brick.order: 2
-deck.label: TD
-output.pattern: "{stack.short}_{brick.short}{deck.number}.pdf"

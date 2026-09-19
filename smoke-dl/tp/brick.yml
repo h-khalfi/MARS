@@ -1,9 +1,0 @@
-# MARS brick configuration
-
-brick.title: "Travaux pratiques"
-brick.slug: tp
-brick.short_title: TP
-brick.kind: labs
-brick.order: 3
-deck.label: TP
-output.pattern: "{stack.short}_{brick.short}{deck.number}.pdf"
