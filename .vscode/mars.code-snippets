@@ -1,0 +1,537 @@
+{
+  "MARS: Cover": {
+    "prefix": "mars-cover",
+    "body": [
+      "<!-- _class: title-academic institutional-cover -->",
+      "",
+      "<img class=\"logo-ensak\" src=\"${1:../../../shared/branding/ensak-logo.png}\" alt=\"ENSA Khouribga\" />",
+      "<img class=\"logo-usms\" src=\"${2:../../../shared/branding/usms-logo.png}\" alt=\"Université Sultan Moulay Slimane\" />",
+      "",
+      "<div class=\"cover-title-block\">",
+      "<div class=\"title\">${3:Titre du cours}</div>",
+      "<div class=\"subtitle\">${4:Sous-titre}</div>",
+      "</div>",
+      "",
+      "<div class=\"cover-meta\">",
+      "<div class=\"author\">${5:Hamza Khalfi}</div>",
+      "<div class=\"date\">${6:Année universitaire 2026–2027}</div>",
+      "<div class=\"organization\">École Nationale des Sciences Appliquées de Khouribga<br>Université Sultan Moulay Slimane</div>",
+      "</div>"
+    ],
+    "description": "Couverture institutionnelle MARS"
+  },
+  "MARS: Figure right": {
+    "prefix": "mars-fig-right",
+    "body": [
+      "<!-- _class: figure-right -->",
+      "",
+      "# ${1:Titre}",
+      "",
+      "<div class=\"layout-grid\">",
+      "",
+      "<div class=\"slide-content\">",
+      "",
+      "${2:Contenu...}",
+      "",
+      "</div>",
+      "",
+      "<div class=\"slide-visual\">",
+      "",
+      "![${3:Description}](${4:assets/image.png})",
+      "",
+      "<div class=\"caption\">${5:Légende}</div>",
+      "",
+      "</div>",
+      "",
+      "</div>"
+    ]
+  },
+  "MARS: Figure left": {
+    "prefix": "mars-fig-left",
+    "body": [
+      "<!-- _class: figure-left -->",
+      "",
+      "# ${1:Titre}",
+      "",
+      "<div class=\"layout-grid\">",
+      "",
+      "<div class=\"slide-content\">",
+      "",
+      "${2:Contenu...}",
+      "",
+      "</div>",
+      "",
+      "<div class=\"slide-visual\">",
+      "",
+      "![${3:Description}](${4:assets/image.png})",
+      "",
+      "</div>",
+      "",
+      "</div>"
+    ]
+  },
+  "MARS: Two columns": {
+    "prefix": "mars-cols",
+    "body": [
+      "<!-- _class: two-columns -->",
+      "",
+      "# ${1:Titre}",
+      "",
+      "<div class=\"columns\">",
+      "",
+      "<div>",
+      "",
+      "## ${2:Colonne A}",
+      "",
+      "${3:Contenu A}",
+      "",
+      "</div>",
+      "",
+      "<div>",
+      "",
+      "## ${4:Colonne B}",
+      "",
+      "${5:Contenu B}",
+      "",
+      "</div>",
+      "",
+      "</div>"
+    ]
+  },
+  "MARS: Comparison": {
+    "prefix": "mars-compare",
+    "body": [
+      "<!-- _class: comparison -->",
+      "",
+      "# ${1:Titre}",
+      "",
+      "<div class=\"comparison-grid\">",
+      "",
+      "<div class=\"comparison-card\">",
+      "",
+      "## ${2:A}",
+      "",
+      "${3:Contenu A}",
+      "",
+      "</div>",
+      "",
+      "<div class=\"comparison-card accent\">",
+      "",
+      "## ${4:B}",
+      "",
+      "${5:Contenu B}",
+      "",
+      "</div>",
+      "",
+      "</div>"
+    ]
+  },
+  "MARS: Diagram": {
+    "prefix": "mars-diagram",
+    "body": [
+      "<!-- _class: diagram -->",
+      "",
+      "# ${1:Titre}",
+      "",
+      "<div class=\"diagram-intro\">${2:Introduction courte}</div>",
+      "",
+      "<div class=\"diagram-flow\">",
+      "",
+      "<div class=\"diagram-node\">",
+      "<div class=\"diagram-label\">${3:Entrée}</div>",
+      "${4:Étape A}",
+      "</div>",
+      "",
+      "<div class=\"diagram-arrow\">→</div>",
+      "",
+      "<div class=\"diagram-node\">",
+      "<div class=\"diagram-label\">${5:Transformation}</div>",
+      "${6:Étape B}",
+      "</div>",
+      "",
+      "<div class=\"diagram-arrow\">→</div>",
+      "",
+      "<div class=\"diagram-node learned\">",
+      "<div class=\"diagram-label learned\">${7:Appris}</div>",
+      "${8:Étape C}",
+      "</div>",
+      "",
+      "</div>",
+      "",
+      "<div class=\"diagram-takeaway\">${9:Message essentiel}</div>"
+    ]
+  },
+  "MARS: Figure full": {
+    "prefix": "mars-fig-full",
+    "body": [
+      "<!-- _class: figure-full -->",
+      "",
+      "# ${1:Titre}",
+      "",
+      "<div class=\"full-figure\">",
+      "",
+      "![${2:Description}](${3:assets/image.png})",
+      "",
+      "</div>",
+      "",
+      "<div class=\"caption\">${4:Légende}</div>"
+    ]
+  },
+  "MARS: Equation focus": {
+    "prefix": "mars-equation",
+    "body": [
+      "<!-- _class: equation-focus -->",
+      "",
+      "# ${1:Titre}",
+      "",
+      "<div class=\"main-equation\">",
+      "",
+      "$$",
+      "${2:y = \\sigma(Wx+b)}",
+      "$$",
+      "",
+      "</div>",
+      "",
+      "<div class=\"equation-notes\">",
+      "",
+      "<div class=\"equation-note\"><span class=\"equation-symbol\">W</span><span>${3:poids}</span></div>",
+      "<div class=\"equation-note\"><span class=\"equation-symbol\">b</span><span>${4:biais}</span></div>",
+      "<div class=\"equation-note accent\"><span class=\"equation-symbol\">σ</span><span>${5:activation}</span></div>",
+      "",
+      "</div>"
+    ]
+  },
+  "MARS block: Definition": {
+    "prefix": "mars-def",
+    "body": [
+      "<div class=\"academic-block definition\">",
+      "",
+      "### ${1:Définition}",
+      "",
+      "${2:Contenu...}",
+      "",
+      "</div>"
+    ]
+  },
+  "MARS block: Theorem": {
+    "prefix": "mars-thm",
+    "body": [
+      "<div class=\"academic-block theorem\">",
+      "",
+      "### ${1:Théorème}",
+      "",
+      "${2:Contenu...}",
+      "",
+      "</div>"
+    ]
+  },
+  "MARS block: Property": {
+    "prefix": "mars-prop",
+    "body": [
+      "<div class=\"academic-block property\">",
+      "",
+      "### ${1:Propriété}",
+      "",
+      "${2:Contenu...}",
+      "",
+      "</div>"
+    ]
+  },
+  "MARS block: Proof": {
+    "prefix": "mars-proof",
+    "body": [
+      "<div class=\"academic-block proof\">",
+      "",
+      "### ${1:Preuve}",
+      "",
+      "${2:Contenu...}",
+      "",
+      "</div>"
+    ]
+  },
+  "MARS block: Example": {
+    "prefix": "mars-ex",
+    "body": [
+      "<div class=\"academic-block example\">",
+      "",
+      "### ${1:Exemple}",
+      "",
+      "${2:Contenu...}",
+      "",
+      "</div>"
+    ]
+  },
+  "MARS block: Remark": {
+    "prefix": "mars-rem",
+    "body": [
+      "<div class=\"academic-block remark\">",
+      "",
+      "### ${1:Remarque}",
+      "",
+      "${2:Contenu...}",
+      "",
+      "</div>"
+    ]
+  },
+  "MARS block: Exercise": {
+    "prefix": "mars-exo",
+    "body": [
+      "<div class=\"academic-block exercise\">",
+      "",
+      "### ${1:Exercice}",
+      "",
+      "${2:Contenu...}",
+      "",
+      "</div>"
+    ]
+  },
+  "MARS block: Takeaway": {
+    "prefix": "mars-key",
+    "body": [
+      "<div class=\"academic-block takeaway\">",
+      "",
+      "### ${1:À retenir}",
+      "",
+      "${2:Contenu...}",
+      "",
+      "</div>"
+    ]
+  },
+  "MARS block: Warning": {
+    "prefix": "mars-warn",
+    "body": [
+      "<div class=\"academic-block warning\">",
+      "",
+      "### ${1:Attention}",
+      "",
+      "${2:Contenu...}",
+      "",
+      "</div>"
+    ]
+  },
+  "MARS: Architecture": {
+    "prefix": "mars-arch",
+    "body": [
+      "<!-- _class: architecture -->",
+      "",
+      "# ${1:Titre}",
+      "",
+      "<div class=\"architecture-canvas\">",
+      "<div class=\"architecture-flow\">",
+      "",
+      "<div class=\"architecture-stage\"><strong>${2:Entrée}</strong>${3:Données}</div>",
+      "<div class=\"architecture-arrow\">→</div>",
+      "<div class=\"architecture-stage feature\"><strong>${4:Représentation}</strong>${5:Transformation}</div>",
+      "<div class=\"architecture-arrow\">→</div>",
+      "<div class=\"architecture-stage learned\"><strong>${6:Bloc appris}</strong>${7:Traitement}</div>",
+      "<div class=\"architecture-arrow\">→</div>",
+      "<div class=\"architecture-stage output\"><strong>${8:Sortie}</strong>${9:Prédiction}</div>",
+      "",
+      "</div>",
+      "</div>",
+      "",
+      "<div class=\"architecture-note\">${10:Note ou interprétation}</div>"
+    ]
+  },
+  "MARS: Algorithm": {
+    "prefix": "mars-algo",
+    "body": [
+      "<!-- _class: algorithm -->",
+      "",
+      "# ${1:Titre}",
+      "",
+      "<div class=\"algorithm-box\">",
+      "",
+      "<div class=\"algorithm-meta\">",
+      "<div><strong>Entrée :</strong> ${2:données}</div>",
+      "<div><strong>Sortie :</strong> ${3:résultat}</div>",
+      "</div>",
+      "",
+      "1. ${4:Initialiser}",
+      "2. ${5:Calculer}",
+      "3. ${6:Mettre à jour}",
+      "",
+      "<div class=\"algorithm-update\">",
+      "",
+      "$$",
+      "${7:\\theta \\leftarrow \\theta - \\eta \\nabla_\\theta L}",
+      "$$",
+      "",
+      "</div>",
+      "",
+      "</div>",
+      "",
+      "<div class=\"algorithm-note\">${8:Remarque sur convergence, complexité ou usage}</div>"
+    ]
+  },
+  "MARS: Math derivation": {
+    "prefix": "mars-derive",
+    "body": [
+      "<!-- _class: math-derivation -->",
+      "",
+      "# ${1:Titre}",
+      "",
+      "<div class=\"derivation\">",
+      "",
+      "<div class=\"derivation-step\"><div class=\"derivation-index\">1</div><div class=\"derivation-body\">${2:Première étape}</div></div>",
+      "<div class=\"derivation-step\"><div class=\"derivation-index\">2</div><div class=\"derivation-body\">${3:Deuxième étape}</div></div>",
+      "<div class=\"derivation-step\"><div class=\"derivation-index\">3</div><div class=\"derivation-body\">${4:Troisième étape}</div></div>",
+      "<div class=\"derivation-conclusion\">${5:Conclusion}</div>",
+      "",
+      "</div>"
+    ]
+  },
+  "MARS: Timeline": {
+    "prefix": "mars-timeline",
+    "body": [
+      "<!-- _class: timeline -->",
+      "",
+      "# ${1:Titre}",
+      "",
+      "<div class=\"timeline-track\">",
+      "",
+      "<div class=\"timeline-item\"><span class=\"timeline-year\">${2:1943}</span><span class=\"timeline-title\">${3:Événement}</span>${4:Description}</div>",
+      "<div class=\"timeline-item\"><span class=\"timeline-year\">${5:1958}</span><span class=\"timeline-title\">${6:Événement}</span>${7:Description}</div>",
+      "<div class=\"timeline-item accent\"><span class=\"timeline-year\">${8:2012}</span><span class=\"timeline-title\">${9:Événement clé}</span>${10:Description}</div>",
+      "",
+      "</div>"
+    ]
+  },
+  "MARS: Gallery": {
+    "prefix": "mars-gallery",
+    "body": [
+      "<!-- _class: gallery gallery-4 -->",
+      "",
+      "# ${1:Titre}",
+      "",
+      "<div class=\"gallery-grid\">",
+      "",
+      "<div class=\"gallery-item\">",
+      "<img src=\"${3:assets/a.png}\" alt=\"${2:A}\" />",
+      "<h3>${4:Exemple A}</h3>",
+      "<p>${5:Légende}</p>",
+      "</div>",
+      "",
+      "<div class=\"gallery-item\">",
+      "<img src=\"${7:assets/b.png}\" alt=\"${6:B}\" />",
+      "<h3>${8:Exemple B}</h3>",
+      "<p>${9:Légende}</p>",
+      "</div>",
+      "",
+      "<div class=\"gallery-item\">",
+      "<img src=\"${11:assets/c.png}\" alt=\"${10:C}\" />",
+      "<h3>${12:Exemple C}</h3>",
+      "<p>${13:Légende}</p>",
+      "</div>",
+      "",
+      "<div class=\"gallery-item\">",
+      "<img src=\"${15:assets/d.png}\" alt=\"${14:D}\" />",
+      "<h3>${16:Exemple D}</h3>",
+      "<p>${17:Légende}</p>",
+      "</div>",
+      "",
+      "</div>"
+    ]
+  },
+  "MARS: Experiment": {
+    "prefix": "mars-exp",
+    "body": [
+      "<!-- _class: experiment -->",
+      "",
+      "# ${1:Titre}",
+      "",
+      "<div class=\"experiment-grid\">",
+      "",
+      "<div class=\"experiment-figure\">",
+      "![${2:Résultat}](${3:assets/result.png})",
+      "<div class=\"caption\">${4:Légende}</div>",
+      "</div>",
+      "",
+      "<div class=\"experiment-result\">",
+      "## ${5:Observation}",
+      "<div class=\"metric\">${6:98.2 %}<small>${7:métrique}</small></div>",
+      "${8:Interprétation}",
+      "</div>",
+      "",
+      "</div>"
+    ]
+  },
+  "MARS: Motivation": {
+    "prefix": "mars-motivation",
+    "body": [
+      "<!-- _class: motivation -->",
+      "",
+      "# ${1:Motivation}",
+      "",
+      "<div class=\"motivation-question\">${2:Une machine peut-elle **apprendre** plutôt qu'être explicitement programmée ?}</div>",
+      "",
+      "<div class=\"motivation-context\">${3:Contexte historique ou problème déclencheur.}</div>"
+    ]
+  },
+  "MARS: Question": {
+    "prefix": "mars-question",
+    "body": [
+      "<!-- _class: question -->",
+      "",
+      "# ${1:Question}",
+      "",
+      "<div class=\"question-text\">${2:Pourquoi avons-nous besoin de plusieurs couches ?}</div>",
+      "",
+      "<div class=\"question-hint\">${3:Indice ou sous-question facultative}</div>"
+    ]
+  },
+  "MARS: Intuition": {
+    "prefix": "mars-intuition",
+    "body": [
+      "<!-- _class: intuition -->",
+      "",
+      "# ${1:Titre}",
+      "",
+      "<div class=\"intuition-grid\">",
+      "",
+      "<div class=\"intuition-content\">${2:Explication intuitive}<div class=\"intuition-card\">${3:Idée à garder en tête}</div></div>",
+      "",
+      "<div class=\"intuition-visual\">![${4:Illustration}](${5:assets/intuition.png})</div>",
+      "",
+      "</div>"
+    ]
+  },
+  "MARS: Take home": {
+    "prefix": "mars-take-home",
+    "body": [
+      "<!-- _class: take-home -->",
+      "",
+      "# ${1:À retenir}",
+      "",
+      "<div class=\"take-home-grid\">",
+      "",
+      "<div class=\"take-home-item\"><span class=\"take-home-number\">01</span>${2:Premier message}</div>",
+      "<div class=\"take-home-item\"><span class=\"take-home-number\">02</span>${3:Deuxième message}</div>",
+      "<div class=\"take-home-item\"><span class=\"take-home-number\">03</span>${4:Troisième message}</div>",
+      "",
+      "</div>"
+    ]
+  },
+  "MARS: Slide source": {
+    "prefix": "mars-source",
+    "body": [
+      "<div class=\"slide-source\">${1:Adapté de : Auteur, cours/source.}</div>"
+    ]
+  },
+  "MARS: References": {
+    "prefix": "mars-references",
+    "body": [
+      "<!-- _class: references -->",
+      "",
+      "# ${1:Références}",
+      "",
+      "<div class=\"references-list\">",
+      "",
+      "<div class=\"reference-entry\"><strong>${2:Auteur}</strong><br>${3:Titre / cours / institution}</div>",
+      "",
+      "<div class=\"reference-entry\"><strong>${4:Auteur}</strong><br>${5:Titre / cours / institution}</div>",
+      "",
+      "</div>"
+    ]
+  }
+}

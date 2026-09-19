@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="420" viewBox="0 0 760 420">
+<rect width="760" height="420" rx="24" fill="#ffffff"/>
+<line x1="90" y1="340" x2="690" y2="340" stroke="#667085" stroke-width="3"/><line x1="90" y1="340" x2="90" y2="60" stroke="#667085" stroke-width="3"/>
+<polyline points="100,300 180,260 260,270 340,210 420,190 500,130 580,115 670,80" fill="none" stroke="#f04b32" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="380" y="395" text-anchor="middle" font-family="sans-serif" font-size="20" fill="#667085">Époques</text><text x="35" y="210" transform="rotate(-90 35 210)" text-anchor="middle" font-family="sans-serif" font-size="20" fill="#667085">Performance</text></svg>

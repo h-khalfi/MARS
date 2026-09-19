@@ -1,0 +1,37 @@
+{
+  "name": "mars-authoring-rendering-studio",
+  "version": "0.7.0",
+  "description": "MARS — Marp Authoring & Rendering Studio. Stack/Brick/Deck/Slide authoring for courses, conferences, workshops and training.",
+  "type": "module",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  },
+  "bin": {
+    "mars": "./bin/mars.mjs"
+  },
+  "scripts": {
+    "mars": "node ./bin/mars.mjs",
+    "doctor": "node ./bin/mars.mjs doctor",
+    "guide": "node ./bin/mars.mjs guide",
+    "test": "node --test ./test/*.test.mjs"
+  },
+  "dependencies": {
+    "@marp-team/marp-cli": "4.5.1"
+  },
+  "files": [
+    "bin",
+    "src",
+    "themes",
+    "templates",
+    "profiles",
+    "style-guide",
+    "docs",
+    "README.md",
+    "CHANGELOG.md",
+    "VERSION",
+    "install.sh",
+    "uninstall.sh",
+    "install-local.sh"
+  ]
+}

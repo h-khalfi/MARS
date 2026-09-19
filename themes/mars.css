@@ -1,0 +1,1199 @@
+/* @theme mars */
+
+@import "gödel";
+
+/* ============================================================
+   MARS — Marp Authoring & Rendering Studio
+   Design API 1.0
+   Academic design system for ENSA Khouribga / USMS
+   ============================================================ */
+
+:root {
+  /* Institutional palette */
+  --mars-title: #003c4b;
+  --mars-accent: #f04b32;
+  --mars-text: #29323a;
+  --mars-muted: #667085;
+  --mars-footer: #8a9099;
+
+  /* Surfaces */
+  --mars-surface: #ffffff;
+  --mars-surface-soft: #f7f8fa;
+  --mars-border: #d8dde3;
+
+  /* Academic semantics */
+  --mars-definition: #286f8e;
+  --mars-definition-bg: #eef6f9;
+  --mars-theorem: #7057a3;
+  --mars-theorem-bg: #f4f1f9;
+  --mars-property: #5565a6;
+  --mars-property-bg: #f1f3fb;
+  --mars-example: #548457;
+  --mars-example-bg: #f1f7f1;
+  --mars-exercise: #cf7b19;
+  --mars-exercise-bg: #fff6ea;
+  --mars-remark: #6b7280;
+  --mars-remark-bg: #f4f4f5;
+  --mars-warning: #c84b4b;
+  --mars-warning-bg: #fff0f0;
+  --mars-takeaway-bg: #fff2ef;
+
+  /* Geometry */
+  --mars-radius: 8px;
+  --mars-gap: 28px;
+  --mars-gap-lg: 36px;
+}
+
+/* ============================================================
+   GLOBAL / REGULAR SLIDES
+   ============================================================ */
+
+section {
+  color: var(--mars-text);
+}
+
+footer {
+  color: var(--mars-footer);
+  font-size: 8.5pt;
+  font-weight: 400;
+}
+
+.mars-caption,
+.caption {
+  margin-top: 8px;
+  color: var(--mars-muted);
+  font-size: 10.5pt;
+  line-height: 1.25;
+  text-align: center;
+}
+
+.mars-kicker {
+  color: var(--mars-accent);
+  font-size: 10pt;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.mars-muted { color: var(--mars-muted); }
+.mars-accent { color: var(--mars-accent); }
+
+/* ============================================================
+   INSTITUTIONAL COVER
+   ============================================================ */
+
+section.title-academic.institutional-cover {
+  display: block;
+  padding: 46px 72px 48px 72px;
+  background:
+    linear-gradient(135deg, rgba(0, 60, 75, 0.018) 0%, rgba(255,255,255,0) 42%),
+    var(--marpx-title_academic-background-color) !important;
+  color: var(--mars-text);
+}
+
+section.institutional-cover .logo-primary,
+section.institutional-cover .logo-ensak {
+  position: absolute;
+  top: 56px;
+  right: 72px;
+  height: 120px;
+  width: auto;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  object-fit: contain;
+  background: transparent;
+}
+
+section.institutional-cover .logo-secondary,
+section.institutional-cover .logo-usms {
+  position: absolute;
+  right: 72px;
+  bottom: 78px;
+  height: 170px;
+  width: auto;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  object-fit: contain;
+  background: transparent;
+}
+
+section.institutional-cover .cover-title-block {
+  position: absolute;
+  top: 205px;
+  left: 72px;
+  width: 850px;
+  margin: 0;
+  padding: 0;
+}
+
+section.institutional-cover .title {
+  width: auto;
+  margin: 0;
+  padding: 0 !important;
+  border-bottom: none !important;
+  color: var(--mars-title);
+  font-size: 38pt;
+  font-weight: 600;
+  line-height: 1.08 !important;
+  letter-spacing: -0.35px;
+}
+
+section.institutional-cover .title::after {
+  content: "";
+  display: block;
+  width: 540px;
+  height: 2px;
+  margin-top: 19px;
+  background: var(--mars-accent);
+}
+
+section.institutional-cover .subtitle {
+  width: 780px;
+  margin: 19px 0 0 0;
+  padding: 0 !important;
+  color: var(--mars-muted);
+  font-size: 21pt;
+  font-weight: 400;
+  line-height: 1.25;
+}
+
+section.institutional-cover .cover-meta {
+  position: absolute;
+  left: 72px;
+  bottom: 57px;
+  width: 720px;
+  margin: 0;
+  padding: 0;
+}
+
+section.institutional-cover .author {
+  margin: 0 0 11px 0;
+  color: var(--mars-accent) !important;
+  font-size: 22pt;
+  font-weight: 600 !important;
+  line-height: 1.1;
+}
+
+section.institutional-cover .date {
+  margin: 0 0 8px 0;
+  color: var(--mars-text);
+  font-size: 14.5pt;
+  font-weight: 400;
+  line-height: 1.25;
+}
+
+section.institutional-cover .organization {
+  margin: 0;
+  color: var(--mars-muted);
+  font-size: 12.5pt;
+  font-weight: 400;
+  line-height: 1.32;
+}
+
+section.institutional-cover > header,
+section.institutional-cover > footer,
+section.institutional-cover::after {
+  display: none !important;
+}
+
+/* ============================================================
+   ACADEMIC BLOCKS
+   Stable reusable API: .academic-block + semantic class
+   ============================================================ */
+
+.academic-block {
+  margin: 15px 0;
+  padding: 15px 19px 16px 19px;
+  border: 1px solid var(--mars-border);
+  border-left-width: 6px;
+  border-radius: var(--mars-radius);
+  background: var(--mars-surface);
+  font-size: 17pt;
+  line-height: 1.36;
+}
+
+.academic-block > h3:first-child {
+  margin: 0 0 9px 0;
+  padding: 0;
+  font-size: 15.5pt;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.academic-block > :last-child { margin-bottom: 0; }
+.academic-block > :first-child { margin-top: 0; }
+
+.academic-block.definition {
+  border-left-color: var(--mars-definition);
+  background: var(--mars-definition-bg);
+}
+.academic-block.definition > h3:first-child { color: var(--mars-definition); }
+
+.academic-block.theorem {
+  border-left-color: var(--mars-theorem);
+  background: var(--mars-theorem-bg);
+}
+.academic-block.theorem > h3:first-child { color: var(--mars-theorem); }
+
+.academic-block.property {
+  border-left-color: var(--mars-property);
+  background: var(--mars-property-bg);
+}
+.academic-block.property > h3:first-child { color: var(--mars-property); }
+
+.academic-block.proof {
+  border-left-color: var(--mars-remark);
+  background: #fafafa;
+}
+.academic-block.proof > h3:first-child {
+  color: var(--mars-remark);
+  font-style: italic;
+}
+
+.academic-block.example {
+  border-left-color: var(--mars-example);
+  background: var(--mars-example-bg);
+}
+.academic-block.example > h3:first-child { color: var(--mars-example); }
+
+.academic-block.remark {
+  border-left-color: var(--mars-remark);
+  background: var(--mars-remark-bg);
+}
+.academic-block.remark > h3:first-child { color: var(--mars-remark); }
+
+.academic-block.exercise {
+  border-left-color: var(--mars-exercise);
+  background: var(--mars-exercise-bg);
+}
+.academic-block.exercise > h3:first-child { color: var(--mars-exercise); }
+
+.academic-block.takeaway {
+  border-left-color: var(--mars-accent);
+  background: var(--mars-takeaway-bg);
+}
+.academic-block.takeaway > h3:first-child { color: var(--mars-accent); }
+
+.academic-block.warning {
+  border-left-color: var(--mars-warning);
+  background: var(--mars-warning-bg);
+}
+.academic-block.warning > h3:first-child { color: var(--mars-warning); }
+
+/* Compact block variant for dense slides */
+.academic-block.compact {
+  margin: 10px 0;
+  padding: 9px 14px 10px 14px;
+  font-size: 14.8pt;
+}
+.academic-block.compact > h3:first-child {
+  margin-bottom: 6px;
+  font-size: 14.1pt;
+}
+
+/* ============================================================
+   CORE LAYOUT 1 — CONTENT
+   ============================================================ */
+
+section.content > h1 { margin-bottom: 28px; }
+section.content .content-body {
+  max-width: 1080px;
+}
+
+/* ============================================================
+   CORE LAYOUTS 2/3 — FIGURE RIGHT / FIGURE LEFT
+   Contract: .layout-grid > .slide-content + .slide-visual
+   ============================================================ */
+
+section.figure-right .layout-grid,
+section.figure-left .layout-grid {
+  display: grid;
+  gap: var(--mars-gap-lg);
+  align-items: center;
+  min-height: 430px;
+  width: 100%;
+}
+
+section.figure-right .layout-grid {
+  grid-template-columns: minmax(0, 1.28fr) minmax(0, .92fr);
+  grid-template-areas: "content visual";
+}
+
+section.figure-left .layout-grid {
+  grid-template-columns: minmax(0, .92fr) minmax(0, 1.28fr);
+  grid-template-areas: "visual content";
+}
+
+section.figure-right .slide-content,
+section.figure-left .slide-content { grid-area: content; min-width: 0; }
+
+section.figure-right .slide-visual,
+section.figure-left .slide-visual {
+  grid-area: visual;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+section.figure-right .slide-visual img,
+section.figure-left .slide-visual img {
+  display: block;
+  max-width: 100%;
+  max-height: 360px;
+  width: auto;
+  height: auto;
+  margin: 0 auto;
+  object-fit: contain;
+}
+
+section.figure-right.figure-small .slide-visual img,
+section.figure-left.figure-small .slide-visual img { max-height: 290px; }
+
+section.figure-right.figure-large .slide-visual img,
+section.figure-left.figure-large .slide-visual img { max-height: 410px; }
+
+/* ============================================================
+   CORE LAYOUT 4 — TWO COLUMNS
+   Contract: .columns > div + div
+   ============================================================ */
+
+section.two-columns .columns {
+  display: grid;
+  grid-template-columns: minmax(0,1fr) minmax(0,1fr);
+  gap: var(--mars-gap-lg);
+  align-items: start;
+  width: 100%;
+}
+
+section.two-columns.cols-40-60 .columns {
+  grid-template-columns: minmax(0,.8fr) minmax(0,1.2fr);
+}
+
+section.two-columns.cols-60-40 .columns {
+  grid-template-columns: minmax(0,1.2fr) minmax(0,.8fr);
+}
+
+section.two-columns .columns > div {
+  min-width: 0;
+}
+
+section.two-columns .columns h2 {
+  margin-top: 0;
+}
+
+/* ============================================================
+   CORE LAYOUT 5 — COMPARISON
+   Contract: .comparison-grid > .comparison-card x2
+   ============================================================ */
+
+section.comparison .comparison-grid {
+  display: grid;
+  grid-template-columns: minmax(0,1fr) minmax(0,1fr);
+  gap: 30px;
+  align-items: stretch;
+  width: 100%;
+}
+
+section.comparison .comparison-card {
+  min-width: 0;
+  padding: 20px 22px;
+  border: 1px solid var(--mars-border);
+  border-top: 5px solid var(--mars-title);
+  border-radius: var(--mars-radius);
+  background: var(--mars-surface);
+}
+
+section.comparison .comparison-card.accent {
+  border-top-color: var(--mars-accent);
+}
+
+section.comparison .comparison-card > h2:first-child,
+section.comparison .comparison-card > h3:first-child {
+  margin-top: 0;
+  color: var(--mars-title);
+}
+
+section.comparison .comparison-card.accent > h2:first-child,
+section.comparison .comparison-card.accent > h3:first-child {
+  color: var(--mars-accent);
+}
+
+/* ============================================================
+   CORE LAYOUT 6 — DIAGRAM / PIPELINE
+   Contract: .diagram-intro + .diagram-flow + .diagram-takeaway
+             .diagram-flow contains .diagram-node / .diagram-arrow
+   ============================================================ */
+
+section.diagram .diagram-intro {
+  max-width: 1030px;
+  margin-bottom: 22px;
+  font-size: 17pt;
+  line-height: 1.32;
+}
+
+section.diagram .diagram-flow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  width: 100%;
+  margin: 18px auto 26px auto;
+}
+
+section.diagram .diagram-node {
+  flex: 1 1 0;
+  min-width: 0;
+  min-height: 118px;
+  padding: 12px 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--mars-title);
+  border-radius: var(--mars-radius);
+  background: var(--mars-surface);
+  text-align: center;
+  font-size: 15pt;
+  font-weight: 600;
+  line-height: 1.16;
+}
+
+section.diagram .diagram-node.learned {
+  border-color: var(--mars-accent);
+}
+
+section.diagram .diagram-node img {
+  max-width: 100%;
+  max-height: 98px;
+  width: auto;
+  height: auto;
+  margin: 0;
+  object-fit: contain;
+}
+
+section.diagram .diagram-node.image-node {
+  padding: 7px;
+  overflow: hidden;
+}
+
+section.diagram .diagram-node.image-node img {
+  max-height: 112px;
+  border-radius: 5px;
+}
+
+section.diagram .diagram-label {
+  margin-bottom: 7px;
+  color: var(--mars-muted);
+  font-size: 9pt;
+  font-weight: 700;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+}
+
+section.diagram .diagram-label.learned,
+section.diagram .diagram-node.learned .diagram-label { color: var(--mars-accent); }
+
+section.diagram .diagram-arrow {
+  flex: 0 0 auto;
+  color: var(--mars-accent);
+  font-size: 28pt;
+  font-weight: 700;
+  line-height: 1;
+}
+
+section.diagram .diagram-takeaway {
+  max-width: 1030px;
+  margin: 0 auto;
+  padding: 12px 18px;
+  border-left: 5px solid var(--mars-accent);
+  background: var(--mars-takeaway-bg);
+  font-size: 14.5pt;
+  line-height: 1.34;
+}
+
+/* ============================================================
+   CORE LAYOUT 7 — FIGURE FULL
+   Contract: .full-figure + optional .caption
+   ============================================================ */
+
+section.figure-full .full-figure {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 430px;
+}
+
+section.figure-full .full-figure img {
+  display: block;
+  max-width: 1040px;
+  max-height: 430px;
+  width: auto;
+  height: auto;
+  margin: 0 auto;
+  object-fit: contain;
+}
+
+/* ============================================================
+   CORE LAYOUT 8 — EQUATION FOCUS
+   Contract: .main-equation + optional .equation-notes
+   ============================================================ */
+
+section.equation-focus .main-equation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 220px;
+  margin: 12px auto 18px auto;
+  padding: 18px 30px;
+  border-radius: var(--mars-radius);
+  background: var(--mars-surface-soft);
+  text-align: center;
+  font-size: 1.45em;
+}
+
+section.equation-focus .main-equation mjx-container {
+  margin: 0 !important;
+}
+
+section.equation-focus .equation-notes {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+section.equation-focus .equation-note {
+  min-width: 0;
+  display: flex;
+  align-items: baseline;
+  gap: 9px;
+  padding: 12px 14px;
+  border-top: 3px solid var(--mars-title);
+  background: var(--mars-surface);
+  font-size: 14pt;
+  line-height: 1.3;
+}
+
+section.equation-focus .equation-symbol {
+  flex: 0 0 auto;
+  min-width: 1.25em;
+  color: var(--mars-title);
+  font-size: 1.08em;
+  font-weight: 700;
+}
+
+section.equation-focus .equation-note.accent {
+  border-top-color: var(--mars-accent);
+}
+
+section.equation-focus .equation-note.accent .equation-symbol {
+  color: var(--mars-accent);
+}
+
+/* ============================================================
+   UTILITY: dense / reduced typography
+   Use only when content legitimately needs it.
+   ============================================================ */
+
+section.compact-slide { font-size: .92em; }
+section.compact-slide .academic-block { font-size: 14.5pt; }
+
+/* ============================================================
+   SPECIALIZED LAYOUT 1 — ARCHITECTURE
+   Contract: .architecture-canvas > .architecture-flow
+             .architecture-flow contains .architecture-stage / .architecture-arrow
+   ============================================================ */
+
+section.architecture .architecture-canvas {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 390px;
+  width: 100%;
+}
+
+section.architecture .architecture-flow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 13px;
+  width: 100%;
+}
+
+section.architecture .architecture-stage {
+  flex: 1 1 0;
+  min-width: 0;
+  min-height: 155px;
+  padding: 16px 13px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--mars-border);
+  border-top: 5px solid var(--mars-title);
+  border-radius: var(--mars-radius);
+  background: var(--mars-surface);
+  text-align: center;
+  font-size: 14.5pt;
+  line-height: 1.22;
+}
+
+section.architecture .architecture-stage.feature { border-top-color: var(--mars-definition); }
+section.architecture .architecture-stage.learned { border-top-color: var(--mars-accent); }
+section.architecture .architecture-stage.output { border-top-color: var(--mars-example); }
+
+section.architecture .architecture-stage strong {
+  display: block;
+  margin-bottom: 7px;
+  color: var(--mars-title);
+  font-size: 15.5pt;
+}
+
+section.architecture .architecture-stage img {
+  max-width: 100%;
+  max-height: 100px;
+  margin: 0 auto 8px auto;
+  object-fit: contain;
+}
+
+section.architecture .architecture-arrow {
+  flex: 0 0 auto;
+  color: var(--mars-accent);
+  font-size: 25pt;
+  font-weight: 700;
+}
+
+section.architecture .architecture-note {
+  max-width: 1030px;
+  margin: 14px auto 0 auto;
+  color: var(--mars-muted);
+  font-size: 13.5pt;
+  line-height: 1.32;
+  text-align: center;
+}
+
+section.architecture.architecture-wide .architecture-stage {
+  min-height: 135px;
+  padding: 13px 10px;
+  font-size: 13.2pt;
+}
+
+/* ============================================================
+   SPECIALIZED LAYOUT 2 — ALGORITHM
+   Contract: .algorithm-box + optional .algorithm-note
+   ============================================================ */
+
+section.algorithm .algorithm-box {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 20px 25px;
+  border: 1px solid var(--mars-border);
+  border-left: 6px solid var(--mars-title);
+  border-radius: var(--mars-radius);
+  background: var(--mars-surface);
+  font-size: 15.5pt;
+  line-height: 1.34;
+}
+
+section.algorithm .algorithm-meta {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 16px;
+  padding-bottom: 13px;
+  border-bottom: 1px solid var(--mars-border);
+  color: var(--mars-muted);
+  font-size: 12.5pt;
+}
+
+section.algorithm .algorithm-meta strong { color: var(--mars-title); }
+
+section.algorithm .algorithm-box ol,
+section.algorithm .algorithm-box ul {
+  margin: 8px 0 8px 1.15em;
+}
+
+section.algorithm .algorithm-box li { margin: 6px 0; }
+
+section.algorithm .algorithm-update {
+  margin: 13px 0;
+  padding: 10px 15px;
+  border-radius: 6px;
+  background: var(--mars-surface-soft);
+  text-align: center;
+  font-size: 1.12em;
+}
+
+section.algorithm .algorithm-note {
+  max-width: 1040px;
+  margin: 14px auto 0 auto;
+  padding: 10px 15px;
+  border-left: 4px solid var(--mars-accent);
+  background: var(--mars-takeaway-bg);
+  font-size: 13.5pt;
+}
+
+section.algorithm.algorithm-compact .algorithm-box { font-size: 14pt; }
+
+/* ============================================================
+   SPECIALIZED LAYOUT 3 — MATH DERIVATION
+   Contract: .derivation > .derivation-step* + optional .derivation-conclusion
+   ============================================================ */
+
+section.math-derivation .derivation {
+  max-width: 1040px;
+  margin: 0 auto;
+}
+
+section.math-derivation .derivation-step {
+  display: grid;
+  grid-template-columns: 54px minmax(0,1fr);
+  gap: 15px;
+  align-items: start;
+  margin: 10px 0;
+  padding: 11px 16px 11px 11px;
+  border: 1px solid var(--mars-border);
+  border-radius: var(--mars-radius);
+  background: var(--mars-surface);
+}
+
+section.math-derivation .derivation-index {
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: var(--mars-title);
+  color: white;
+  font-size: 13pt;
+  font-weight: 700;
+}
+
+section.math-derivation .derivation-body {
+  min-width: 0;
+  font-size: 14.5pt;
+  line-height: 1.32;
+}
+
+section.math-derivation .derivation-body > :first-child { margin-top: 0; }
+section.math-derivation .derivation-body > :last-child { margin-bottom: 0; }
+
+section.math-derivation .derivation-conclusion {
+  margin: 16px 0 0 69px;
+  padding: 12px 17px;
+  border-left: 5px solid var(--mars-accent);
+  background: var(--mars-takeaway-bg);
+  font-size: 15pt;
+  font-weight: 600;
+}
+
+/* ============================================================
+   SPECIALIZED LAYOUT 4 — TIMELINE
+   Contract: .timeline-track > .timeline-item*
+   ============================================================ */
+
+section.timeline .timeline-track {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(135px, 1fr));
+  gap: 13px;
+  width: 100%;
+  margin: 86px auto 0 auto;
+  padding-top: 26px;
+}
+
+section.timeline .timeline-track::before {
+  content: "";
+  position: absolute;
+  top: 11px;
+  left: 4%;
+  right: 4%;
+  height: 3px;
+  background: var(--mars-border);
+}
+
+section.timeline .timeline-item {
+  position: relative;
+  min-width: 0;
+  padding: 15px 12px 13px 12px;
+  border: 1px solid var(--mars-border);
+  border-radius: var(--mars-radius);
+  background: var(--mars-surface);
+  text-align: center;
+  font-size: 12.8pt;
+  line-height: 1.22;
+}
+
+section.timeline .timeline-item::before {
+  content: "";
+  position: absolute;
+  top: -24px;
+  left: 50%;
+  width: 14px;
+  height: 14px;
+  transform: translateX(-50%);
+  border: 3px solid white;
+  border-radius: 50%;
+  background: var(--mars-title);
+  box-shadow: 0 0 0 2px var(--mars-title);
+}
+
+section.timeline .timeline-item.accent::before {
+  background: var(--mars-accent);
+  box-shadow: 0 0 0 2px var(--mars-accent);
+}
+
+section.timeline .timeline-year {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--mars-accent);
+  font-size: 15pt;
+  font-weight: 700;
+}
+
+section.timeline .timeline-title {
+  display: block;
+  color: var(--mars-title);
+  font-weight: 700;
+}
+
+section.timeline.timeline-compact .timeline-item { font-size: 11.6pt; }
+
+/* ============================================================
+   SPECIALIZED LAYOUT 5 — GALLERY
+   Contract: .gallery-grid > .gallery-item*
+   ============================================================ */
+
+section.gallery .gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0,1fr));
+  gap: 18px;
+  width: 100%;
+}
+
+section.gallery.gallery-2 .gallery-grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
+section.gallery.gallery-4 .gallery-grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
+section.gallery.gallery-6 .gallery-grid { grid-template-columns: repeat(3, minmax(0,1fr)); }
+
+section.gallery .gallery-item {
+  min-width: 0;
+  padding: 10px;
+  border: 1px solid var(--mars-border);
+  border-radius: var(--mars-radius);
+  background: var(--mars-surface);
+  text-align: center;
+}
+
+section.gallery .gallery-item img {
+  display: block;
+  width: 100%;
+  height: 160px;
+  margin: 0 auto 8px auto;
+  object-fit: contain;
+}
+
+section.gallery.gallery-2 .gallery-item img { height: 245px; }
+section.gallery.gallery-4 .gallery-item img { height: 155px; }
+section.gallery.gallery-6 .gallery-item img { height: 125px; }
+
+section.gallery .gallery-item h3 {
+  margin: 4px 0 5px 0;
+  color: var(--mars-title);
+  font-size: 13.5pt;
+}
+
+section.gallery .gallery-item p {
+  margin: 0;
+  color: var(--mars-muted);
+  font-size: 10.8pt;
+  line-height: 1.25;
+}
+
+/* ============================================================
+   SPECIALIZED LAYOUT 6 — EXPERIMENT / RESULT
+   Contract: .experiment-grid > .experiment-figure + .experiment-result
+   ============================================================ */
+
+section.experiment .experiment-grid {
+  display: grid;
+  grid-template-columns: minmax(0,1.55fr) minmax(0,.85fr);
+  gap: 32px;
+  align-items: center;
+  width: 100%;
+}
+
+section.experiment.experiment-reverse .experiment-grid {
+  grid-template-columns: minmax(0,.85fr) minmax(0,1.55fr);
+}
+
+section.experiment.experiment-reverse .experiment-figure { order: 2; }
+section.experiment.experiment-reverse .experiment-result { order: 1; }
+
+section.experiment .experiment-figure {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+section.experiment .experiment-figure img {
+  max-width: 100%;
+  max-height: 390px;
+  margin: 0 auto;
+  object-fit: contain;
+}
+
+section.experiment .experiment-result {
+  min-width: 0;
+  padding: 18px 20px;
+  border-left: 5px solid var(--mars-accent);
+  background: var(--mars-surface-soft);
+  font-size: 14.5pt;
+  line-height: 1.34;
+}
+
+section.experiment .experiment-result h2,
+section.experiment .experiment-result h3 {
+  margin-top: 0;
+  color: var(--mars-title);
+}
+
+section.experiment .metric {
+  margin: 12px 0;
+  color: var(--mars-accent);
+  font-size: 25pt;
+  font-weight: 700;
+  line-height: 1.05;
+}
+
+section.experiment .metric small {
+  display: block;
+  margin-top: 5px;
+  color: var(--mars-muted);
+  font-size: 10.5pt;
+  font-weight: 400;
+}
+
+/* ============================================================
+   SPECIALIZED LAYOUT 7 — MOTIVATION
+   Contract: .motivation-question + optional .motivation-context/.motivation-visual
+   ============================================================ */
+
+section.motivation {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+section.motivation > h1 { margin-bottom: 34px; }
+
+section.motivation .motivation-question {
+  max-width: 980px;
+  margin: 0 auto;
+  color: var(--mars-title);
+  font-size: 30pt;
+  font-weight: 600;
+  line-height: 1.18;
+  text-align: center;
+}
+
+section.motivation .motivation-question strong { color: var(--mars-accent); }
+
+section.motivation .motivation-context {
+  max-width: 820px;
+  margin: 30px auto 0 auto;
+  color: var(--mars-muted);
+  font-size: 15.5pt;
+  line-height: 1.35;
+  text-align: center;
+}
+
+section.motivation .motivation-visual {
+  max-width: 720px;
+  margin: 22px auto 0 auto;
+  text-align: center;
+}
+
+section.motivation .motivation-visual img {
+  max-width: 100%;
+  max-height: 210px;
+  object-fit: contain;
+}
+
+/* ============================================================
+   SPECIALIZED LAYOUT 8 — QUESTION
+   Contract: .question-text + optional .question-hint
+   ============================================================ */
+
+section.question {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background:
+    radial-gradient(circle at 78% 20%, rgba(240,75,50,.07), transparent 28%),
+    var(--mars-surface-soft);
+}
+
+section.question > h1 {
+  color: var(--mars-accent);
+  font-size: 17pt;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+section.question .question-text {
+  max-width: 980px;
+  margin: 55px auto 0 auto;
+  color: var(--mars-title);
+  font-size: 34pt;
+  font-weight: 600;
+  line-height: 1.18;
+  text-align: center;
+}
+
+section.question .question-hint {
+  max-width: 820px;
+  margin: 34px auto 0 auto;
+  color: var(--mars-muted);
+  font-size: 14pt;
+  text-align: center;
+}
+
+/* ============================================================
+   SPECIALIZED LAYOUT 9 — INTUITION
+   Contract: .intuition-grid > .intuition-content + .intuition-visual
+   ============================================================ */
+
+section.intuition .intuition-grid {
+  display: grid;
+  grid-template-columns: minmax(0,1.15fr) minmax(0,.85fr);
+  gap: 34px;
+  align-items: center;
+  width: 100%;
+}
+
+section.intuition .intuition-content {
+  min-width: 0;
+  font-size: 17pt;
+  line-height: 1.38;
+}
+
+section.intuition .intuition-card {
+  margin-top: 18px;
+  padding: 15px 18px;
+  border-left: 5px solid var(--mars-definition);
+  background: var(--mars-definition-bg);
+  font-size: 14.5pt;
+}
+
+section.intuition .intuition-visual {
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+section.intuition .intuition-visual img {
+  max-width: 100%;
+  max-height: 380px;
+  object-fit: contain;
+}
+
+/* ============================================================
+   SPECIALIZED LAYOUT 10 — TAKE HOME
+   Contract: .take-home-grid > .take-home-item*
+   ============================================================ */
+
+section.take-home .take-home-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0,1fr));
+  gap: 20px;
+  width: 100%;
+  margin-top: 34px;
+}
+
+section.take-home.take-home-2 .take-home-grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
+section.take-home.take-home-4 .take-home-grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
+
+section.take-home .take-home-item {
+  min-width: 0;
+  min-height: 190px;
+  padding: 19px 19px 17px 19px;
+  border: 1px solid var(--mars-border);
+  border-radius: var(--mars-radius);
+  background: var(--mars-surface);
+  font-size: 15pt;
+  line-height: 1.3;
+}
+
+section.take-home .take-home-number {
+  display: block;
+  margin-bottom: 15px;
+  color: var(--mars-accent);
+  font-size: 27pt;
+  font-weight: 700;
+  line-height: 1;
+}
+
+section.take-home .take-home-item strong { color: var(--mars-title); }
+
+/* ============================================================
+   AUTHORING UTILITIES — SOURCES & REFERENCES
+   ============================================================ */
+
+.slide-source {
+  position: absolute;
+  right: 58px;
+  bottom: 48px;
+  max-width: 72%;
+  color: var(--mars-muted);
+  font-size: 8.5pt;
+  line-height: 1.25;
+  text-align: right;
+}
+
+.slide-source strong { color: var(--mars-text); }
+.slide-source a { color: inherit; text-decoration: none; }
+
+section.references > h1 {
+  margin-bottom: 28px;
+}
+
+section.references .references-list,
+section.references ol,
+section.references ul {
+  margin-top: 10px;
+  font-size: 14.5pt;
+  line-height: 1.32;
+}
+
+section.references li {
+  margin-bottom: 12px;
+}
+
+section.references .reference-entry {
+  margin: 0 0 15px 0;
+  padding-left: 18px;
+  border-left: 3px solid var(--mars-border);
+  font-size: 14.5pt;
+  line-height: 1.32;
+}
+
+section.references .reference-entry strong {
+  color: var(--mars-title);
+}
+
+section.references.compact .references-list,
+section.references.compact ol,
+section.references.compact ul,
+section.references.compact .reference-entry {
+  font-size: 12.5pt;
+  line-height: 1.25;
+}

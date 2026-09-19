@@ -1,0 +1,4 @@
+dist/
+.mars/
+.DS_Store
+__pycache__/

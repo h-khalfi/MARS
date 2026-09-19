@@ -1,0 +1,9 @@
+{
+  "markdown.marp.themes": [
+    "./.mars/themes/marpx.css",
+    "./.mars/themes/gödel.css",
+    "./.mars/themes/mars.css"
+  ],
+  "markdown.marp.html": "all",
+  "markdown.marp.diagnostics.slideContentOverflow": true
+}
